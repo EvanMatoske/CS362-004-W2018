@@ -1,0 +1,83 @@
+Title: Bug 1   
+
+Function: card_smithy
+
+Date: 03/04/18          
+Reported By: Evan Matoske  
+Email: matoskee@onid.oregonstate.edu      
+
+
+Product:                        Version:
+Platform:                       Version:
+Browser:                        Version:
+URL:        
+
+Is it reproducible: Yes / Occasionally / One Time / No
+
+Description
+===========
+The Smithy card improperly adds cards to the players deck
+
+
+Steps to Produce/Reproduce
+--------------------------
+If you initialize a game state and save the hand count before passing the game state into the cardEffect function with the smithy card and then compare hand count after the function is complete the intended hand count is not equal to the hand count given.
+
+
+Expected Results
+----------------
+The players hand count should increase by three (3) cards
+
+
+Actual Results
+--------------
+The players hand count was only increased by two (2)
+
+
+Other Information
+-----------------
+The problem appears to be within the card_smithy function. The for loop seems to be improperly implemented. 
+
+
+
+
+Title: Bug 2    
+
+Function: card_council_room 
+
+Date: 03/04/18           
+Reported By: Evan Matoske  
+Email: Matoskee@onid.oregonstate.edu      
+
+
+Product:                        Version:
+Platform:                       Version:
+Browser:                        Version:
+URL:        
+
+Is it reproducible: Yes / Occasionally / One Time / No
+
+Description
+===========
+The card_council_room function improperly increases the numBuys variable in the game state.
+
+
+Steps to Produce/Reproduce
+--------------------------
+If you initialize a game state and save the numBuys variable before passing the state into the card effect function wit the council_room card and then compare the pre and post numBuys variables you will see that the numBuys variable decreases instead of increasing.
+
+
+Expected Results
+————————
+numBuys variable increases by one after using council_room card
+
+
+Actual Results
+--------------
+numBuys variable decreases by one after using council_room card
+
+
+
+Other Information
+-----------------
+The problem appears to be within the card_council_room function.
